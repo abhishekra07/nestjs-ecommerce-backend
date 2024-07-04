@@ -1,7 +1,9 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UserService } from './user.service';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('users')
 @Controller('users')
 export class UserController {
   constructor(private readonly userService: UserService) {}
@@ -14,12 +16,6 @@ export class UserController {
   @Post('login')
   login(@Body() loginRequest: { email: string; password: string }) {}
 
-  @Post('verify-otp/:otp')
+  @Post('verify-otp/:otp/:email')
   verifyOtp() {}
-
-  @Get('send-email/:email')
-  sendEmail(@Param('email') email: string) {
-    this.userService.sendEmail(email);
-    return { message: 'Sent email success!' };
-  }
 }
