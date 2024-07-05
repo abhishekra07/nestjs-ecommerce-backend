@@ -1,0 +1,43 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Welcome to Our Service</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 0;
+      background-color: #f4f4f4; } .container { max-width: 600px; margin: 20px
+      auto; background-color: #ffffff; padding: 20px; border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); } .header { background-color:
+      #007bff; color: #ffffff; padding: 10px 0; text-align: center;
+      border-radius: 8px 8px 0 0; } .content { margin: 20px 0; } .otp {
+      font-size: 24px; font-weight: bold; color: #007bff; text-align: center;
+      margin: 20px 0; background-color: #f0f0f0; padding: 10px; border-radius:
+      4px; } .footer { text-align: center; margin-top: 20px; } .verify-link {
+      display: block; text-align: center; margin: 20px 0; color: #007bff;
+      text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='header'>
+        <h1>Welcome to Our Service, 3DCart!</h1>
+      </div>
+      <div class='content'>
+        <p>Hi {{name}},</p>
+        <p>Thank you for joining our service. We're excited to have you on
+          board!</p>
+        <p>Please use the following OTP to verify your email address and
+          complete your registration:</p>
+        <div class='otp'>{{otp}}</div>
+        <a
+          href='http://localhost:3000/users/verify-otp/{{otp}}/{{email}}'
+          class='verify-link'
+        >Click here to verify your account</a>
+        <p>If you did not sign up for this account, please disregard this email.</p>
+      </div>
+      <div class='footer'>
+        <p>&copy; 2024 Our Service. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
