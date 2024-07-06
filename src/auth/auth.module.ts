@@ -6,7 +6,7 @@ import { JwtAuthGuard } from './guard/jwt-auth.guard';
 
 @Module({
   imports: [JwtModule],
-  providers: [AuthService],
+  providers: [AuthService, JwtStrategy, JwtAuthGuard],
   exports: [AuthService, JwtStrategy, JwtAuthGuard],
 })
 export class AuthModule {}

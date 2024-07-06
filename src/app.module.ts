@@ -12,6 +12,7 @@ import { OrderModule } from './order/order.module';
 import { PaymentModule } from './payment/payment.module';
 import { ReviewAndRatingModule } from './review/review-rating.module';
 import { SearchModule } from './search/search.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { SearchModule } from './search/search.module';
     PaymentModule,
     ReviewAndRatingModule,
     SearchModule,
+    AuthModule,
   ],
 })
 export class AppModule {}
