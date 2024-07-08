@@ -1,5 +1,5 @@
 import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
-import { Category } from './category.entity';
+import { Category } from '../../category/entities/category.entity';
 import { Brand } from './brand.entity';
 import { BaseEntity } from 'src/shared/model/base.entity';
 
