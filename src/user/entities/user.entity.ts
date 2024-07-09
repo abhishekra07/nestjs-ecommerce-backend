@@ -14,10 +14,13 @@ export class User extends BaseEntity {
   password: string;
 
   @Column({ name: 'is_verified', default: false })
-  isVerified: string;
+  isVerified: boolean;
 
   @Column({ name: 'is_active', default: true })
   isActive: boolean;
+
+  @Column({ name: 'otp', nullable: true })
+  otp: number;
 
   @Column({
     type: 'enum',
